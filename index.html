@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Credit card example form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="credid-card-layout">
+        <div class="form">
+          <div class="card-number-container">
+            <label>Card Numbers</label>
+            <input
+              id="card-number"
+              type="tel"
+              name="card-numebr"
+              maxlength="16"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              placeholder="card number"
+            />
+          </div>
+          <div class="card-name">
+            <label>Card Holder</label>
+            <input
+              type="text"
+              name="Card Holder"
+              id="card-name"
+              placeholder="full name"
+            />
+          </div>
+          <div class="card-info-group">
+            <div class="card-expired">
+              <legend>Expiration Date</legend>
+
+              <select id="months" name="">
+                <option value="months" disabled selected hidden>months</option>
+                <option value="01">Gen</option>
+                <option value="02">Feb</option>
+                <option value="03">Mar</option>
+                <option value="04">Apr</option>
+                <option value="05">Mag</option>
+                <option value="06">Giu</option>
+                <option value="07">Lug</option>
+                <option value="08">Ago</option>
+                <option value="09">Set</option>
+                <option value="10">Ott</option>
+                <option value="11">Nov</option>
+                <option value="12">Dic</option>
+              </select>
+              <select id="years" name="">
+                <option value="year" disabled selected hidden>year</option>
+              </select>
+            </div>
+
+            <div class="card-cvv">
+              <label>CVV</label>
+              <input
+                type="text"
+                name="cvv"
+                id="cvv"
+                maxlength="3"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                placeholder="cvv"
+              />
+            </div>
+          </div>
+          <div class="button">
+            <button type="">Invia</button>
+          </div>
+        </div>
+        <div class="credid-card">
+          <div class="credid-card-container">
+            <div class="card-front">
+              <div class="card-mask"></div>
+              <div class="card-header">
+                <div class="logo">
+                  <img src="assets/img/chip.png" alt="" />
+                </div>
+                <div class="brand">
+                  <img src="" alt="" />
+                </div>
+              </div>
+              <div class="card-numbers">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="card-details">
+                <div class="name">
+                  <p class="card-holder">Card Holder</p>
+                  <span>FULL NAME</span>
+                </div>
+
+                <div class="date">
+                  <p class="expires">Expires</p>
+                  <div class="expires"><span>MM</span>/<span>YY</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="cvv-container">
+                <p>cvv</p>
+                <div class="cvv-txt">***</div>
+              </div>
+              <div class="brand">
+                <img src="" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
