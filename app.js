@@ -18,7 +18,7 @@ personalNumbers.addEventListener("keyup", (e) => {
 
   numbersValue[0].innerHTML = `<span class='numbers-animation'>${e.target.value.slice(
     0,
-    5
+    4
   )}</span>`;
 
   numbersValue[1].innerHTML = `<span class='numbers-animation'>${e.target.value
